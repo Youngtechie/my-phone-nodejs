@@ -1,0 +1,448 @@
+.phonedesign {
+  background-size: cover;
+  width: 280px;
+  height: 500px;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  font-weight: 900;
+  color: black;
+}
+.left {
+  left: 90px;
+  border-radius: 0 0 0 30px;
+}
+.right {
+  right: 90px;
+  border-radius: 0 0 30px 0;
+}
+.left,
+.right {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+}
+.circle {
+  position: absolute;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  left: 133px;
+  z-index: 5;
+  border-radius: 100%;
+}
+.DateTime {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  align-self: center;
+  width: 60%;
+  font-size: large;
+  margin: 15% 0;
+  background-color: rgb(69, 126, 133);
+  padding: 10px;
+  border-radius: 50px;
+}
+.date {
+  margin-top: 10px;
+}
+.AppsContainer {
+  display: none;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 60%;
+  width: 100%;
+  overflow-y: scroll;
+}
+.icon {
+  margin: 10px 5px;
+  background-color: rgb(69, 126, 133);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 40%;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}
+/* .icon:hover {
+  background-color: rgb(47, 101, 108);
+  cursor: pointer;
+} */
+.icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.btnLike {
+  position: absolute;
+  height: 20px;
+  width: 40px;
+  border: 2px solid black;
+  border-radius: 20px;
+  right: 20px;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.changeTheme {
+  border-radius: 20px;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.changeTheme img[src="/images/icons/day.png"] {
+  filter: brightness(0) invert(1);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.clockFace {
+  height: 150px;
+  width: 150px;
+  align-self: center;
+  border-radius: 100%;
+  background-color: rgb(69, 126, 133);
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  justify-content: center;
+  font-size: 13px;
+}
+.centerPoint {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  align-self: center;
+  border-radius: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hourHand,
+.minuteHand,
+.secsHand {
+  position: absolute;
+  height: 2px;
+  width: 45px;
+  background-color: black;
+  transform-origin: center left;
+  left: 5px;
+}
+#hourInd {
+  background-color: gold;
+  left: 45px;
+}
+.hourHand {
+  transform: rotateZ(600deg);
+  width: 30px;
+}
+#minutesInd {
+  left: 25px;
+}
+.indicator {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  position: relative;
+  top: -4px;
+  border-radius: 100%;
+}
+.secsHand {
+  transform: rotateZ(300deg);
+}
+#secsInd {
+  background-color: blue;
+  left: 40px;
+}
+.secs {
+  position: absolute;
+  left: 120%;
+  top: -10px;
+  background-color: rgb(20, 127, 220);
+  border-radius: 50%;
+  padding: 3px;
+}
+.display {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  background-color: rgb(69, 126, 133);
+  bottom: 0;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.back_icon {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  display: none;
+  cursor: pointer;
+}
+.showHidden {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.upSign {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 25px;
+  width: 100%;
+  animation: moveup 1s linear 0s infinite;
+}
+.firstS,
+.secondS {
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  transform: rotate(50deg);
+}
+.firstS {
+  left: 88px;
+}
+.secondS {
+  transform: rotate(310deg);
+  right: 88px;
+}
+
+@keyframes moveup {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -5px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.heart {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transform: rotate(45deg);
+  z-index: 100000;
+  top: 10px;
+  left: 50px;
+  animation: heartbeat 1s linear 0s infinite normal;
+  cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+.heart::before {
+  left: -10px;
+}
+
+.heart::after {
+  top: -10px;
+}
+.likes {
+  position: absolute;
+  top: -35px;
+  left: 15px;
+  rotate: -45deg;
+  width: 40px;
+  font-size: smaller;
+}
+.LikeC {
+  position: relative;
+  width: 100%;
+  top: 20px;
+  height: 20%;
+}
+
+.hearts {
+  background-color: red;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  transform: rotate(45deg);
+  z-index: 200;
+  top: 0px;
+  left: 55px;
+}
+
+.one {
+  animation: lovingOne 1s linear 0s infinite normal;
+}
+.two {
+  animation: lovingTwo 1s linear 0s infinite normal;
+}
+.three {
+  top: -40px;
+  animation: lovingThree 1s linear 0s infinite normal;
+  left: 57px;
+}
+.four {
+  top: -15px;
+  animation: lovingFour 1s linear 0s infinite normal;
+}
+.hearts::before,
+.hearts::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+.hearts::before {
+  left: -3px;
+}
+
+.hearts::after {
+  top: -3px;
+}
+
+.iconName {
+  height: 15%;
+}
+
+@keyframes lovingOne {
+  0% {
+    top: -10px;
+    left: 57px;
+  }
+  20% {
+    top: -10px;
+    left: 55px;
+  }
+  40% {
+    top: -15px;
+    left: 50px;
+  }
+  60% {
+    top: -20px;
+    left: 45px;
+  }
+  80% {
+    top: -25px;
+    left: 35px;
+  }
+  100% {
+    top: -35px;
+    left: 25px;
+  }
+}
+
+@keyframes lovingTwo {
+  0% {
+    top: -10px;
+    left: 57px;
+  }
+  20% {
+    top: -12px;
+    left: 55px;
+  }
+  40% {
+    top: -15px;
+    left: 50px;
+  }
+  60% {
+    top: -20px;
+    left: 45px;
+  }
+  80% {
+    top: -25px;
+    left: 40px;
+  }
+  100% {
+    top: -30px;
+    left: 35px;
+  }
+}
+
+@keyframes lovingThree {
+  0% {
+    top: -10px;
+    left: 57px;
+  }
+  20% {
+    top: -15px;
+    left: 60px;
+  }
+  40% {
+    top: -20px;
+    left: 65px;
+  }
+  60% {
+    top: -25px;
+    left: 65px;
+  }
+  80% {
+    top: -30px;
+    left: 70px;
+  }
+  100% {
+    top: -35px;
+    left: 75px;
+  }
+}
+
+@keyframes lovingFour {
+  0% {
+    top: -10px;
+    left: 57px;
+  }
+  20% {
+    top: -15px;
+    left: 60px;
+  }
+  40% {
+    top: -20px;
+    left: 65px;
+  }
+  60% {
+    top: -25px;
+    left: 65px;
+  }
+  80% {
+    top: -35px;
+    left: 70px;
+  }
+  100% {
+    top: -50px;
+    left: 80px;
+  }
+}
+
+.plusOne {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  rotate: -45deg;
+  font-size: smaller;
+  display: none;
+}
+.id{
+  position: absolute;
+  display: block;
+}
